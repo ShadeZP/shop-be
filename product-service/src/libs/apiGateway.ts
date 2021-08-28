@@ -14,3 +14,14 @@ export const formatJSONResponse = (response: Record<string, unknown>) => {
     }
   }
 }
+
+export const errorResponse = () => {
+  return{
+    statusCode: 400,
+    body: 'Bad request',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    }
+  }
+}

@@ -7,13 +7,16 @@ import { middyfy } from '@libs/lambda';
 import { IProduct } from '../../interfaces/product.interface';
 import { mockProducts } from '../mock'
 
-const getProducts: ValidatedEventAPIGatewayProxyEvent<{ products: IProduct[] }> = async () => {
-  const products = await (() => mockProducts)
-  if (products) {
-    return formatJSONResponse({ products: products });
+const getProductById: ValidatedEventAPIGatewayProxyEvent<{ product: IProduct }> = async (event) => {
+  const { id } = event.pathParameters;
+  const product = await mockProducts.find((product: IProduct) => product.id === id.toString());
+  if (product) {
+    return formatJSONResponse({
+      product: product,
+    });
   } else {
     return errorResponse();
   }
 }
 
-export const main = middyfy(getProducts);
+export const main = middyfy(getProductById);
