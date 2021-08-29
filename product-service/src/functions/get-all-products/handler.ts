@@ -8,7 +8,7 @@ import { IProduct } from '../../interfaces/product.interface';
 import { mockProducts } from '../mock'
 
 const getProducts: ValidatedEventAPIGatewayProxyEvent<{ products: IProduct[] }> = async () => {
-  const products = await (() => mockProducts)
+  const products = mockProducts;
   if (products) {
     return formatJSONResponse({ products: products });
   } else {
