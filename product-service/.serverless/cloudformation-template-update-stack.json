@@ -167,7 +167,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/product-service/dev/1630149273952-2021-08-28T11:14:33.952Z/product-service.zip"
+          "S3Key": "serverless/product-service/dev/1630239463043-2021-08-29T12:17:43.043Z/product-service.zip"
         },
         "Handler": "src/functions/get-all-products/handler.main",
         "Runtime": "nodejs14.x",
@@ -197,7 +197,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/product-service/dev/1630149273952-2021-08-28T11:14:33.952Z/product-service.zip"
+          "S3Key": "serverless/product-service/dev/1630239463043-2021-08-29T12:17:43.043Z/product-service.zip"
         },
         "Handler": "src/functions/get-product-by-id/handler.main",
         "Runtime": "nodejs14.x",
@@ -220,24 +220,24 @@
         "GetProductByIdLogGroup"
       ]
     },
-    "GetAllProductsLambdaVersionGQsrm62gFIXa7qtZFTz6wuUBckSXEi9hsy8VoewnrQ": {
+    "GetAllProductsLambdaVersionI9ralJS3Pdm0P1pi0DZxzPjFLzXZhVlNvnrmtwccyTE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllProductsLambdaFunction"
         },
-        "CodeSha256": "20tdW+0cAykuBSb4ZKR6RWNC1ll4m6nBaDDb3DzGmOY="
+        "CodeSha256": "iVxdWUSkWefK8FCxgO9WlPgLp19SXo18OkLgTjCUxZw="
       }
     },
-    "GetProductByIdLambdaVersionD362FcWNnkdY6JGJGIYC0snW3rKue5dZBMNeq7Gr0": {
+    "GetProductByIdLambdaVersionsGPduxyYc2yYldVck9JUhFBx4qwzNS5mzOcCMNbB23A": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetProductByIdLambdaFunction"
         },
-        "CodeSha256": "20tdW+0cAykuBSb4ZKR6RWNC1ll4m6nBaDDb3DzGmOY="
+        "CodeSha256": "iVxdWUSkWefK8FCxgO9WlPgLp19SXo18OkLgTjCUxZw="
       }
     },
     "ApiGatewayRestApi": {
@@ -462,7 +462,7 @@
         "GetProductByIdLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1630149267151": {
+    "ApiGatewayDeployment1630239456425": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -564,7 +564,7 @@
     "GetAllProductsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllProductsLambdaVersionGQsrm62gFIXa7qtZFTz6wuUBckSXEi9hsy8VoewnrQ"
+        "Ref": "GetAllProductsLambdaVersionI9ralJS3Pdm0P1pi0DZxzPjFLzXZhVlNvnrmtwccyTE"
       },
       "Export": {
         "Name": "sls-product-service-dev-GetAllProductsLambdaFunctionQualifiedArn"
@@ -573,7 +573,7 @@
     "GetProductByIdLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetProductByIdLambdaVersionD362FcWNnkdY6JGJGIYC0snW3rKue5dZBMNeq7Gr0"
+        "Ref": "GetProductByIdLambdaVersionsGPduxyYc2yYldVck9JUhFBx4qwzNS5mzOcCMNbB23A"
       },
       "Export": {
         "Name": "sls-product-service-dev-GetProductByIdLambdaFunctionQualifiedArn"
